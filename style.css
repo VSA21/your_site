@@ -66,7 +66,7 @@ button {
 }
 
 .section.dark {
-  background: white;
+  background: rgb(255, 255, 255);
 }
 
 /* СЧЁТЧИК */
@@ -96,6 +96,84 @@ button {
 .gallery img:hover {
   transform: scale(1.05);
 }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff0f5;
+}
+
+/* ===== ОБЩИЙ ЧАТ ===== */
+.chat {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== СООБЩЕНИЕ ===== */
+.msg {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/* левый (я) */
+.msg.me {
+  justify-content: flex-start;
+}
+
+/* правый (собеседник) */
+.msg.them {
+  justify-content: flex-end;
+}
+
+/* ===== АВАТАР ===== */
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== ПУЗЫРЬ ===== */
+.bubble {
+  max-width: 60%;
+  padding: 15px 19px;
+  border-radius: 23px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* ===== ЦВЕТА VK ===== */
+.msg.me .bubble {
+  background: #ffffff;
+  color: #000;
+  border-radius: 18px 18px 18px 4px;
+}
+
+.msg.them .bubble {
+  background: #ff4d88;
+  color: white;
+  border-radius: 18px 18px 4px 18px;
+}
+
+/* ===== АНИМАЦИЯ ПОЯВЛЕНИЯ ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* LOVE BOX */
 .love-box p {
