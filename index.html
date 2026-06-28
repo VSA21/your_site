@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Наша история ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- КНОПКИ -->
+<div class="controls">
+  <button onclick="toggleMusic()">🎵 Музыка</button>
+  <button onclick="toggleHearts()">💖 Сердечки</button>
+</div>
+
+<!-- МУЗЫКА -->
+<audio id="music" loop>
+  <source src="Do_bezumiya.mp3" type="audio/mpeg">
+</audio>
+
+<!-- СЕРДЕЧКИ -->
+<div id="hearts"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Наша история <span class="heart-text">❤️</span></h1>
+    <p>Прокрути вниз ↓</p>
+  </div>
+</section>
+
+<!-- СЧЁТЧИК -->
+<section class="section">
+  <h2>Знакомы мы давно, но плотно начали общаться где то в июне 2020 года</h2>
+  <div id="days">...</div>
+</section>
+
+<!-- ИСТОРИЯ -->
+<section class="section dark">
+  <h2>С чего всё началось</h2>
+  <p>Иногда одна встреча меняет всю жизнь...</p>
+</section>
+
+<!-- ГАЛЕРЕЯ -->
+<section class="gallery">
+
+  <img src="1.jpg" onclick="openImage(this.src)">
+  <img src="2.jpg" onclick="openImage(this.src)">
+  <img src="3.jpg" onclick="openImage(this.src)">
+
+</section>
+
+<!-- ЛЮБОВЬ -->
+<section class="section">
+  <h2>Почему ты для меня важна</h2>
+
+  <div class="love-box">
+    <p>❤️ Ну начнем с того что в компании меня держала именно ты</p>
+    <p>❤️ С тобой весело и приятно проводить время</p>
+    <p>❤️ С тобой я настоящий</p>
+  </div>
+</section>
+
+<section class="ps">
+  <div>
+  К моему большому сожалению должен тебе сообщить что у меня больше нет фотографий с тобой, не знаю может быть у тебя они есть, но все же я считаю что эту ситуацию точно нужно исправлять. Что думаешь?
+  </div>
+</section>
+
+<footer>
+  Сделано с ❤️
+</footer>
+
+<!-- ЛАЙТБОКС -->
+<div id="lightbox" onclick="closeImage()">
+  <img id="lightbox-img">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
